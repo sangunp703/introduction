@@ -1,0 +1,24 @@
+{
+  "name": "introduction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style-watch": "node-sass --watch style/sass --output style/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangunp703/introduction.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sangunp703/introduction/issues"
+  },
+  "homepage": "https://github.com/sangunp703/introduction#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass-node": "^4.11.2"
+  }
+}
