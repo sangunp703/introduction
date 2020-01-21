@@ -8,7 +8,71 @@
     <link rel="stylesheet" href="../style/css/style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <header className="header">
+        <img src="http://placehold.it/50X20" alt="logo" />
+        <ul className="page-nav">
+          <li className="page-nav__item">
+            <a href="#">main</a>
+          </li>
+          <li className="page-nav__item">
+            <a href="#">project</a>
+          </li>
+        </ul>
+      </header>
+      <nav className="nav">
+        <ul className="section-nav">
+          <li className="section-nav__item">
+            <a href="">about</a>
+          </li>
+          <li className="section-nav__item">
+            <a href="">skill</a>
+          </li>
+          <li className="section-nav__item">
+            <a href="">work</a>
+          </li>
+          <li className="section-nav__item">
+            <a href="">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <section className="about">
+        <h1 className="hidden-comp">About</h1>
+        <div className="about-box">
+          <div className="title-box">
+            <div className="title-box__back-title">Web Developer</div>
+            <div className="title-box__front-title">Park Sang Un</div>
+          </div>
+          <pre className="about-box__explanation">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus ipsa cupiditate quis, animi repellendus tenetur distinctio cumque sunt similique maiores praesentium, officia vero ut et fuga ipsum quisquam alias incidunt.</pre>
+        </div>
+        <img className="about__banner" src="http://placehold.it/500X500" alt="" />
+      </section>
+      <section className="skill">
+        <h1 className="hidden-comp">Skill</h1>
+        <div className="skill-box">
+          <h2 className="skill-box__title">front</h2>
+          <div className="flex">
+            <div className="flip-card">
+              <img className="flip-card__img" src="" alt="" />
+              <pre className="flip-card__explanation">설명</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="work">
+        <h1 className="hidden-comp">Work</h1>
+        <div className="work-box">
+          <h2 className="work-box__title">project name</h2>
+          <div className="work-card">
+            <img className="work-card__img" src="" alt="" />
+            <pre className="work-card__explanation">설명</pre>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h1 className="hidden-comp">Contact</h1>
+      </section>
+    </div>
     <script src="../js/app.js"></script>
   </body>
 </html>
