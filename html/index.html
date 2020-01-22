@@ -5,72 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>박상운 포트폴리오</title>
+    <link rel="stylesheet" href="../style/css/reset.css" />
     <link rel="stylesheet" href="../style/css/style.css" />
   </head>
   <body>
     <div id="root">
-      <header className="header">
-        <img src="http://placehold.it/50X20" alt="logo" />
-        <ul className="page-nav">
-          <li className="page-nav__item">
-            <a href="#">main</a>
-          </li>
-          <li className="page-nav__item">
-            <a href="#">project</a>
-          </li>
-        </ul>
+      <header class="header">
+        <img class="header__logo" src="../assets/image/logo.png" alt="logo" />
+        <nav class="nav">
+          <ul class="section-nav">
+            <li class="section-nav__item">
+              <div class="section-nav__choice"></div>
+              <a href="">About</a>
+            </li>
+            <li class="section-nav__item">
+              <div class="section-nav__choice"></div>
+              <a href="">Skill</a>
+            </li>
+            <li class="section-nav__item">
+              <div class="section-nav__choice"></div>
+              <a href="">Work</a>
+            </li>
+            <li class="section-nav__item">
+              <div class="section-nav__choice"></div>
+              <a href="">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </header>
-      <nav className="nav">
-        <ul className="section-nav">
-          <li className="section-nav__item">
-            <a href="">about</a>
-          </li>
-          <li className="section-nav__item">
-            <a href="">skill</a>
-          </li>
-          <li className="section-nav__item">
-            <a href="">work</a>
-          </li>
-          <li className="section-nav__item">
-            <a href="">contact</a>
-          </li>
-        </ul>
-      </nav>
-      <section className="about">
-        <h1 className="hidden-comp">About</h1>
-        <div className="about-box">
-          <div className="title-box">
-            <div className="title-box__back-title">Web Developer</div>
-            <div className="title-box__front-title">Park Sang Un</div>
+      <section class="about">
+        <h1 class="hidden-comp">About</h1>
+        <div class="back-title">Web Developer</div>
+        <div class="about-content">
+          <div class="about-box">
+            <div class="about-box__title">Park Sang Un</div>
+            <div class="about-box__line"></div>
+            <p class="about-box__explanation">어떤 식으로든 변할 수 있는 무궁무진한 가능성을 가진 웹에 매력을 느껴 웹 개발자가 되기로 마음먹었습니다.<br />현재는 주로 자바스크립트와 리액트를 이용해 간단한 사이드 프로젝트를 진행 중이며, 웹 기획부터 디자인, 프론트엔드 개발과 서버 개발은 물론 AWS를 이용한 배포까지 진행해봤습니다.<br />무작정 노력만 하기보다는 개발을 즐길 줄 아는 개발자가 되겠습니다.</p>
           </div>
-          <pre className="about-box__explanation">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus ipsa cupiditate quis, animi repellendus tenetur distinctio cumque sunt similique maiores praesentium, officia vero ut et fuga ipsum quisquam alias incidunt.</pre>
-        </div>
-        <img className="about__banner" src="http://placehold.it/500X500" alt="" />
-      </section>
-      <section className="skill">
-        <h1 className="hidden-comp">Skill</h1>
-        <div className="skill-box">
-          <h2 className="skill-box__title">front</h2>
-          <div className="flex">
-            <div className="flip-card">
-              <img className="flip-card__img" src="" alt="" />
-              <pre className="flip-card__explanation">설명</pre>
+          <div class="detail-box">
+            <div class="detail">
+              <img class="detail__icon" src="../assets/image/sprout.png" alt="icon" />
+              <span class="detail__title">주니어 개발자</span>
+            </div>
+            <div class="detail">
+              <img class="detail__icon" src="../assets/image/code.png" alt="icon" />
+              <span class="detail__title">정리된 코드</span>
+            </div>
+            <div class="detail">
+              <img class="detail__icon" src="../assets/image/design.png" alt="icon" />
+              <span class="detail__title">깔끔한 디자인</span>
+            </div>
+            <div class="detail">
+              <img class="detail__icon" src="../assets/image/idea.png" alt="icon" />
+              <span class="detail__title">색다른 아이디어</span>
+            </div>
+            <div class="detail">
+              <img class="detail__icon" src="../assets/image/chat.png" alt="icon" />
+              <span class="detail__title">편안한 소통</span>
             </div>
           </div>
         </div>
       </section>
-      <section id="work">
-        <h1 className="hidden-comp">Work</h1>
-        <div className="work-box">
-          <h2 className="work-box__title">project name</h2>
-          <div className="work-card">
-            <img className="work-card__img" src="" alt="" />
-            <pre className="work-card__explanation">설명</pre>
+      <section class="skill">
+        <h1 class="hidden-comp">Skill</h1>
+        <div class="skill-box">
+          <h2 class="skill-box__title">Front</h2>
+          <div class="flex">
+            <div class="flip-card">
+              <img class="flip-card__img" src="" alt="" />
+              <pre class="flip-card__explanation">설명</pre>
+            </div>
+            <div class="flip-card">
+              <img class="flip-card__img" src="" alt="" />
+              <pre class="flip-card__explanation">설명</pre>
+            </div>
+            <div class="flip-card">
+              <img class="flip-card__img" src="" alt="" />
+              <pre class="flip-card__explanation">설명</pre>
+            </div>
+            <div class="flip-card">
+              <img class="flip-card__img" src="" alt="" />
+              <pre class="flip-card__explanation">설명</pre>
+            </div>
+            <div class="flip-card">
+              <img class="flip-card__img" src="" alt="" />
+              <pre class="flip-card__explanation">설명</pre>
+            </div>
+            <div class="flip-card">
+              <img class="flip-card__img" src="" alt="" />
+              <pre class="flip-card__explanation">설명</pre>
+            </div>
+            <div class="flip-card">
+              <img class="flip-card__img" src="" alt="" />
+              <pre class="flip-card__explanation">설명</pre>
+            </div>
           </div>
         </div>
       </section>
-      <section id="contact">
-        <h1 className="hidden-comp">Contact</h1>
+      <section class="work">
+        <h1 class="hidden-comp">Work</h1>
+        <div class="work-box">
+          <h2 class="work-box__title">project name</h2>
+          <div class="work-card">
+            <pre class="detail__explanation">설명</pre>
+          </div>
+        </div>
+        <div class="work-box">
+          <h2 class="work-box__title">project name</h2>
+          <div class="work-card">
+            <pre class="detail__explanation">설명</pre>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <h1 class="hidden-comp">Contact</h1>
       </section>
     </div>
     <script src="../js/app.js"></script>

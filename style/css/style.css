@@ -1,127 +1,179 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+html {
+  font-size: 1vw;
+  cursor: default; }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
+.hidden-comp {
+  display: none; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  padding: 0 10vw;
+  height: 5vw;
+  line-height: 5vw;
+  background-color: white;
+  color: #827e9d;
+  z-index: 5;
+  border-top: 1px solid #827e9d; }
+
+.header__logo {
+  width: 5vw;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 5vw;
+  cursor: pointer; }
+
+.nav {
+  float: right; }
+
+.section-nav__item {
+  position: relative;
+  float: left;
+  margin: 0 1vw;
+  height: 100%; }
+  .section-nav__item a {
+    all: unset;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px; }
+
+.section-nav__choice {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0px;
+  height: 0%;
+  border: 0.5px solid #827e9d;
+  transition-duration: 0.5s; }
+
 section {
-  display: block; }
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 5vw 0;
+  border-bottom: 2px dashed #827e9d; }
 
-body {
-  line-height: 1; }
+.about {
+  width: 1300px;
+  margin-top: 5vw; }
 
-ol,
-ul {
-  list-style: none; }
+.about-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; }
 
-blockquote,
-q {
-  quotes: none; }
+.back-title {
+  font-size: 6.5vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0px 0px 2px #827e9d; }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none; }
+.about-box {
+  width: 50%; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+.about-box__title {
+  font-size: 4vw;
+  text-transform: uppercase;
+  color: #827e9d; }
+
+.about-box__line {
+  width: 10%;
+  height: 0%;
+  border: 2px solid #827e9d;
+  margin: 4vw auto; }
+
+.about-box__explanation {
+  font-size: 15px;
+  line-height: 45px; }
+
+.detail-box {
+  width: 40%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.detail {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  margin: 10px;
+  transition-duration: 0.2s; }
+  .detail:nth-of-type(1) {
+    background-color: #feecf8; }
+  .detail:nth-of-type(2) {
+    background-color: #ebdced; }
+  .detail:nth-of-type(3) {
+    background-color: #cbb6d7; }
+  .detail:nth-of-type(4) {
+    background-color: #e995ca; }
+  .detail:nth-of-type(5) {
+    background-color: #827e9d; }
+
+.detail__icon {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px; }
+
+.detail__title {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 15px; }
+
+.skill-box__title {
+  font-size: 2rem;
+  text-align: center; }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.flip-card {
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  background-color: gray; }
+
+.work-box__title {
+  text-align: center; }
+
+.work-card {
+  width: 60vw;
+  height: 30vw;
+  background-color: gray;
+  margin: 0 auto; }
+
+.contact {
+  height: 20vw; }
+
+@media screen and (max-width: 1300px) {
+  .about {
+    width: 950px; } }
+
+@media screen and (max-width: 1024px) {
+  .about {
+    width: 700px; }
+  .detail {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px; } }
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 10px; } }
