@@ -2,5 +2,13 @@ $bgc-body: #f8f8f8;
 $bgc-header: #f4f4f4;
 $logo-color: #827e9d;
 $line-color: #cbb6d7;
+$bgc-work-explanation: #efe8f1;
 
 $header-height: 5vw;
+
+.set-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

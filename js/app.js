@@ -1,6 +1,6 @@
 var slideToggle = true
 var slideTimer
-var slideFrequecy = 3000
+var slideFrequecy = 4000
 
 window.onload = () => {
   // header hover 효과
@@ -159,4 +159,16 @@ window.onload = () => {
   left_arrow.addEventListener('click', movePrev)
   right_arrow.addEventListener('click', moveNext)
   control.addEventListener('click', toggleSlide)
+
+  // work 사진 변경 이벤트
+  const screenshot_box_smalls = document.querySelectorAll('.screenshot-box__small')
+
+  for (var i = 0; i < screenshot_box_smalls.length; i++) {
+    screenshot_box_smalls[i].addEventListener('click', e => {
+      const screenshot_box_big = e.currentTarget.parentNode.parentNode.querySelector('.screenshot-box__big')
+      const temp = screenshot_box_big.src
+      screenshot_box_big.src = e.currentTarget.src
+      e.currentTarget.src = temp
+    })
+  }
 }
