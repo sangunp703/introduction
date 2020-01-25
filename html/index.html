@@ -11,7 +11,10 @@
   <body>
     <div id="root">
       <header class="header">
-        <img class="header__logo" src="../assets/image/logo.png" alt="logo" />
+        <div class="header__icon-box">
+          <img class="header__logo" src="../assets/image/logo.png" alt="logo" />
+          <img class="header__menu" src="../assets/image/menu.png" alt="menu"/>
+        </div>
         <nav class="nav">
           <ul class="section-nav">
             <li class="section-nav__item">
@@ -34,6 +37,22 @@
         </nav>
         <div class="header__progress"></div>
       </header>
+      <nav class="nav-for-mobile">
+        <ul class="mobile-nav">
+          <li class="mobile-nav__item">
+            <a href="#about">About</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="#skill">Skill</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="#work">Work</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
       <section id="about" class="about">
         <h1 class="hidden-comp">About</h1>
         <div class="back-title">Web Developer</div>
@@ -99,6 +118,7 @@
                 <div class="flip-card__explanation">각 태그의 Property 숙지</div>
                 <div class="flip-card__explanation">float, position, display, flex, grid 레이아웃</div>
                 <div class="flip-card__explanation">반응형 웹을 위한 미디어 쿼리</div>
+                <div class="flip-card__explanation">다양한 퍼블리싱 경험</div>
               </div>
             </div>
             <div class="flip-card">
@@ -108,7 +128,10 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">JS</div>
                 <div class="flip-card__level">[ Intermediate ]</div>
-                <pre class="flip-card__explanation">설명</pre>
+                <div class="flip-card__explanation">DOM 구조 이해</div>
+                <div class="flip-card__explanation">비동기 함수, 스코프, 실행 컨텍스트 주요 개념 이해</div>
+                <div class="flip-card__explanation">es6 추가 기능 숙지</div>
+                <div class="flip-card__explanation">RESTfulAPI를 통한 AJAX 환경 구현</div>
               </div>
             </div>
             <div class="flip-card">
@@ -118,7 +141,10 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">REACT</div>
                 <div class="flip-card__level">[ Intermediate ]</div>
-                <pre class="flip-card__explanation">설명</pre>
+                <div class="flip-card__explanation">웹 요소 컴포넌트화</div>
+                <div class="flip-card__explanation">react router를 이용한 SPA 개발</div>
+                <div class="flip-card__explanation">Hook 개념의 이해</div>
+                <div class="flip-card__explanation">React Lifecycle 숙지</div>
               </div>
             </div>
             <div class="flip-card">
@@ -128,7 +154,10 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">SASS</div>
                 <div class="flip-card__level">[ Beginner ]</div>
-                <pre class="flip-card__explanation">설명</pre>
+                <div class="flip-card__explanation">스타일 변수 활용으로 스타일 수정 용이</div>
+                <div class="flip-card__explanation">스타일 상속으로 코드 중복 제거</div>
+                <div class="flip-card__explanation">스타일 함수로 유동적인 퍼블리싱</div>
+                <div class="flip-card__explanation">코드 가독성 향상</div>
               </div>
             </div>
           </div>
@@ -144,7 +173,8 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">Node.js</div>
                 <div class="flip-card__level">[ Beginner ]</div>
-                <div class="flip-card__explanation">의미있는 태그 사용</div>
+                <div class="flip-card__explanation">클라이언트 요청에 대한 다양한 API제작</div>
+                <div class="flip-card__explanation">JSON 파일 통신</div>
               </div>
             </div>
             <div class="flip-card">
@@ -154,7 +184,8 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">npm</div>
                 <div class="flip-card__level">[ Intermediate ]</div>
-                <div class="flip-card__explanation">각 태그의 Property 숙지</div>
+                <div class="flip-card__explanation">기본적인 명령어 숙지</div>
+                <div class="flip-card__explanation">명확한 Dependency 관리</div>
               </div>
             </div>
             <div class="flip-card">
@@ -164,7 +195,7 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">yarn</div>
                 <div class="flip-card__level">[ Beginner ]</div>
-                <pre class="flip-card__explanation">설명</pre>
+                <div class="flip-card__explanation">기본적인 명령어 숙지</div>
               </div>
             </div>
             <div class="flip-card">
@@ -174,7 +205,8 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">MongoDB</div>
                 <div class="flip-card__level">[ Beginner ]</div>
-                <pre class="flip-card__explanation">설명</pre>
+                <div class="flip-card__explanation">기본적인 CRUD 시스템 구축</div>
+                <div class="flip-card__explanation">DB 모델 스키마 구성</div>
               </div>
             </div>
             <div class="flip-card">
@@ -184,7 +216,7 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">MySQL</div>
                 <div class="flip-card__level">[ Beginner ]</div>
-                <pre class="flip-card__explanation">설명</pre>
+                <div class="flip-card__explanation">기본적인 CRUD 시스템 구축</div>
               </div>
             </div>
           </div>
@@ -200,7 +232,9 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">Git</div>
                 <div class="flip-card__level">[ Intermediate ]</div>
-                <div class="flip-card__explanation">의미있는 태그 사용</div>
+                <div class="flip-card__explanation">기본적인 명령어 숙지</div>
+                <div class="flip-card__explanation">명확한 커밋 메세지 및 단위</div>
+                <div class="flip-card__explanation">1 Day 1 Commit</div>
               </div>
             </div>
             <div class="flip-card">
@@ -210,7 +244,8 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">Linux</div>
                 <div class="flip-card__level">[ Beginner ]</div>
-                <div class="flip-card__explanation">각 태그의 Property 숙지</div>
+                <div class="flip-card__explanation">기본적인 명령어 숙지</div>
+                <div class="flip-card__explanation">가상환경에서의 Ubuntu OS 사용</div>
               </div>
             </div>
             <div class="flip-card">
@@ -220,7 +255,8 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">terminals</div>
                 <div class="flip-card__level">[ Intermediate ]</div>
-                <pre class="flip-card__explanation">설명</pre>
+                <div class="flip-card__explanation">기본적인 명령어 숙지</div>
+                <div class="flip-card__explanation">터미널 별 명령어 차이 숙지</div>
               </div>
             </div>
             <div class="flip-card">
@@ -230,7 +266,9 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">AWS</div>
                 <div class="flip-card__level">[ Beginner ]</div>
-                <pre class="flip-card__explanation">설명</pre>
+                <div class="flip-card__explanation">기본적인 인스턴스 구축</div>
+                <div class="flip-card__explanation">putty를 활용하여 원격 서버 통제</div>
+                <div class="flip-card__explanation">Route 53으로 DNS 호스팅 구축</div>
               </div>
             </div>
             <div class="flip-card">
@@ -240,7 +278,7 @@
               <div class="flip-card__back">
                 <div class="flip-card__title">nginx</div>
                 <div class="flip-card__level">[ Beginner ]</div>
-                <pre class="flip-card__explanation">설명</pre>
+                <div class="flip-card__explanation">원격 서버 내에서 외부에 서버 공개</div>
               </div>
             </div>
           </div>
@@ -265,7 +303,9 @@
             </div>
             <div class="explanation-box">
               <h2 class="explanation-box__title">술이 그대를 구원하리라</h2>
-              <pre class="explanation-box__explanation">설명 blah blah</pre>
+              <p class="explanation-box__hashtag">#React #React-Router #NodeJS #Express #MongoDB</p>
+              <p class="explanation-box__explanation">간단한 정보를 입력한 뒤 회원가입을 하면 고민을 털어놓고 다른 회원에게 조언을 구할 수 있고 다른 사람의 고민을 해결해주는 롤링페이퍼 형식의 서비스<br/>
+술집에서 주문한 술을 남기면 보관해둔 뒤 다음에 다시 찾아와 마시는 것처럼 마찬가지로 고민을 보관해두고 다시 찾아왔을 때 다른 많은 사람들이 고민을 해결해 줄 수 있도록 댓글을 남기는 형식으로 진행</p>
               <a href="https://github.com/sangunp703/Counselling_center" class="explanation-box__button" target="_blank"><div>C O D E</div></a>
             </div>
           </slide>
@@ -280,7 +320,8 @@
             </div>
             <div class="explanation-box">
               <h2 class="explanation-box__title">박상운 포트폴리오</h2>
-              <pre class="explanation-box__explanation">설명 blah blah</pre>
+              <p class="explanation-box__hashtag">#Vanilla JS #Sass</p>
+              <p class="explanation-box__explanation">현재 페이지<br/>라이브러리나 프레임워크의 도움없이 vanilla JS로 만든 자기소개 페이지<br/>개발자의 소개와 기술역량, 프로젝트, 연락처에 대해 알 수 있다.</p>
               <a href="https://github.com/sangunp703/introduction" class="explanation-box__button" target="_blank"><div>C O D E</div></a>
             </div>
           </slide>
@@ -295,7 +336,8 @@
             </div>
             <div class="explanation-box">
               <h2 class="explanation-box__title">PSU</h2>
-              <pre class="explanation-box__explanation">설명 blah blah</pre>
+              <p class="explanation-box__hashtag">#React #React-Router #NodeJS #Express</p>
+              <p class="explanation-box__explanation">React-Router를 이용한 간단한 자기소개 페이지<br/>개발자의 간단한 정보와 프로젝트 연락처 등을 알 수 있다.</p>
               <a href="https://github.com/sangunp703/PSU" class="explanation-box__button" target="_blank"><div>C O D E</div></a>
             </div>
           </slide>
@@ -310,7 +352,8 @@
             </div>
             <div class="explanation-box">
               <h2 class="explanation-box__title">한글 시계 컴포넌트</h2>
-              <pre class="explanation-box__explanation">설명 blah blah</pre>
+              <p class="explanation-box__hashtag">#React #create-react-app #styled-component</p>
+              <p class="explanation-box__explanation">react를 이용하여 만든 간단한 컴포넌트<br/>시간과 분을 한글로 나타내고 컴포넌트를 감싸는 svg path로 초를 나타낸 한글 시계</p>
               <a href="https://github.com/sangunp703/koreanWatch" class="explanation-box__button" target="_blank"><div>C O D E</div></a>
             </div>
           </slide>
@@ -320,9 +363,12 @@
         <h1 class="hidden-comp">Contact</h1>
         <div class="contact-box">
           <img class="contact-box__icon" src="../assets/image/mail_icon.png" alt="mail_icon" />
-          <div class="contact-box__contact">sangunp703@naver.com</div>
+          <br/>
+          <pre class="contact-box__contact">sangunp703@naver.com<img class="contact-box__copy" src="../assets/image/clipboard.png" alt="copy"></pre>
+          <div class="thin-line"></div>
           <img class="contact-box__icon" src="../assets/image/git_icon.png" alt="git_icon" />
-          <div class="contact-box__contact">https://github.com/sangunp703</div>
+          <br/>
+          <pre class="contact-box__contact">https://github.com/sangunp703<img class="contact-box__copy" src="../assets/image/clipboard.png" alt="copy"></pre>
         </div>
       </section>
     </div>

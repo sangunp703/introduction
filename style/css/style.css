@@ -1,4 +1,5 @@
-.set-center, .explanation-box__button div, .contact-box {
+@import "https://fonts.googleapis.com/css?family=Bowlby+One+SC|Nanum+Gothic+Coding|Sunflower:300&display=swap";
+.set-center, .mobile-nav, .explanation-box__button div, .contact-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7,7 +8,8 @@
 html {
   font-size: 1vw;
   cursor: default;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  font-family: 'Sunflower', sans-serif; }
 
 body::-webkit-scrollbar {
   display: none; }
@@ -19,8 +21,7 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80vw;
-  padding: 0 10vw;
+  width: 100vw;
   height: 5vw;
   line-height: 5vw;
   background-color: white;
@@ -28,15 +29,35 @@ body::-webkit-scrollbar {
   z-index: 5;
   border-top: 1px solid #827e9d; }
 
+.header__icon-box {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
 .header__logo {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
   width: auto;
   height: 50%;
-  vertical-align: middle;
-  margin-right: 5vw;
+  cursor: pointer; }
+
+.header__menu {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  width: auto;
+  height: 50%;
   cursor: pointer; }
 
 .nav {
-  float: right; }
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%); }
 
 .section-nav__item {
   position: relative;
@@ -48,7 +69,7 @@ body::-webkit-scrollbar {
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 15px;
     padding: 10px; }
 
 .section-nav__choice {
@@ -65,9 +86,57 @@ body::-webkit-scrollbar {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0%;
+  width: 0px;
+  background-color: #827e9d;
   border: 1px solid #827e9d;
   transition-duration: 0.8s; }
+
+.nav-for-mobile {
+  display: none;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 75px);
+  background-color: white;
+  z-index: 10; }
+
+.mobile-nav__item {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 12vh 0; }
+  .mobile-nav__item a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 60px;
+    width: 100vw;
+    color: #827e9d; }
+    .mobile-nav__item a::before {
+      content: '';
+      position: absolute;
+      left: -25px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #827e9d;
+      border: 1px solid #827e9d;
+      width: 20px;
+      transition-duration: 1s; }
+    .mobile-nav__item a::after {
+      content: '';
+      position: absolute;
+      right: -25px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #827e9d;
+      border: 1px solid #827e9d;
+      width: 20px;
+      transition-duration: 1s; }
+    .mobile-nav__item a:hover::before {
+      left: 20%; }
+    .mobile-nav__item a:hover::after {
+      right: 20%; }
 
 section {
   position: relative;
@@ -86,10 +155,12 @@ section {
 
 .back-title {
   font-size: 6.5vw;
-  font-weight: bold;
+  font-weight: 400;
+  letter-spacing: 10px;
   text-transform: uppercase;
   color: white;
-  text-shadow: 0px 0px 2px #827e9d; }
+  text-shadow: 0px 0px 2px #827e9d;
+  font-family: 'Bowlby One SC', cursive; }
 
 .about-content {
   margin-top: -30px; }
@@ -98,20 +169,23 @@ section {
   width: 50%; }
 
 .about-box__title {
-  font-size: 4.5vw;
+  font-size: 5vw;
   text-transform: uppercase;
   color: #827e9d;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Bowlby One SC', cursive; }
 
 .thin-line {
   width: 10%;
   height: 0%;
+  background-color: #cbb6d7;
   border: 1px solid #cbb6d7;
   margin: 4vw auto; }
 
 .about-box__explanation {
   font-size: 15px;
-  line-height: 45px; }
+  line-height: 40px;
+  font-family: 'Nanum Gothic Coding', monospace; }
 
 .detail-box {
   width: 40%;
@@ -187,10 +261,12 @@ section {
 
 .skill-box__title {
   font-size: 50px;
+  letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
   color: #827e9d;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: 'Bowlby One SC', cursive; }
 
 .flex {
   display: flex;
@@ -237,7 +313,8 @@ section {
   transition: transform 0.5s linear;
   transform: perspective(600px) rotateY(180deg);
   box-shadow: 0px 0px 5px 1px #827e9d;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Nanum Gothic Coding', monospace; }
 
 .flip-card__title {
   font-size: 40px;
@@ -256,7 +333,7 @@ section {
 .work {
   position: relative;
   width: 100vw;
-  height: 30vw; }
+  height: 40vw; }
 
 .arrow-box {
   text-align: right; }
@@ -273,7 +350,7 @@ section {
   width: 100%;
   height: calc(100% - 50px);
   overflow: hidden;
-  position: absolute;
+  position: relative;
   box-shadow: 0px 0px 15px 3px #827e9d; }
 
 .work-box {
@@ -308,8 +385,8 @@ section {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  height: 55%;
-  width: auto;
+  width: 75%;
+  height: auto;
   box-shadow: 0px 0px 5px 1px #827e9d; }
 
 .screenshot-box__sub {
@@ -317,12 +394,11 @@ section {
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  height: 18%;
   width: 100%; }
 
 .screenshot-box__small {
-  height: 100%;
-  width: auto;
+  width: 25%;
+  height: auto;
   box-shadow: 0px 0px 5px 1px #827e9d;
   margin: 0 5px;
   cursor: pointer;
@@ -335,20 +411,30 @@ section {
   width: 50%;
   height: 100%;
   background-color: #efe8f1;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Nanum Gothic Coding', monospace; }
 
 .explanation-box__title {
   font-size: 30px;
   font-weight: bold;
-  margin: 5vw 0; }
+  margin-top: 3vw; }
 
 .explanation-box__explanation {
+  text-align: left;
   font-size: 15px;
-  line-height: 45px; }
+  line-height: 45px;
+  margin: 0 5%; }
+
+.explanation-box__hashtag {
+  font-size: 15px;
+  color: #827e9d;
+  word-spacing: 15px;
+  cursor: pointer;
+  margin: 3vw 0; }
 
 .explanation-box__button {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   border: 2px solid #827e9d;
@@ -365,8 +451,8 @@ section {
     content: '';
     position: absolute;
     top: 6px;
-    left: -2px;
-    width: calc(100% + 4px);
+    left: -3px;
+    width: calc(100% + 6px);
     height: calc(100% - 12px);
     background: #efe8f1;
     transition: 0.3s ease-in-out;
@@ -378,8 +464,8 @@ section {
     content: '';
     position: absolute;
     left: 6px;
-    top: -2px;
-    height: calc(100% + 4px);
+    top: -3px;
+    height: calc(100% + 6px);
     width: calc(100% - 12px);
     background: #efe8f1;
     transition: 0.3s ease-in-out;
@@ -388,25 +474,31 @@ section {
     transform: scaleX(0); }
 
 .contact {
-  height: 20vw;
-  margin-top: 10vw;
-  text-align: center; }
+  position: relative;
+  height: 25vw;
+  text-align: center;
+  font-family: 'Nanum Gothic Coding', monospace; }
 
 .contact-box {
-  height: 100%; }
+  height: 100%;
+  margin: 5vw 0; }
 
 .contact-box__icon {
-  width: 70px;
+  width: 10%;
   height: auto;
-  margin: 2vw 0; }
+  margin-bottom: 3vw; }
 
 .contact-box__contact {
-  font-size: 40px;
+  font-size: 4vw;
   color: #827e9d;
-  cursor: pointer;
-  margin: 2vw 0; }
+  cursor: pointer; }
 
-.set-center, .explanation-box__button div, .contact-box {
+.contact-box__copy {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px; }
+
+.set-center, .mobile-nav, .explanation-box__button div, .contact-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -414,23 +506,40 @@ section {
 
 @media screen and (max-width: 1300px) {
   .about {
-    width: 950px; } }
+    width: 950px; }
+  .explanation-box__explanation {
+    line-height: 30px;
+    font-size: 12px; }
+  .explanation-box__hashtag {
+    font-size: 12px; }
+  .contact-box__copy {
+    width: 20px;
+    height: 20px; } }
 
 @media screen and (max-width: 1024px) {
+  .header {
+    height: 7.5vw;
+    line-height: 7.5vw; }
   .about {
     width: 700px; }
   .detail {
     position: relative;
     width: 120px;
     height: 120px;
-    border-radius: 60px; } }
+    border-radius: 60px; }
+  .work {
+    height: 60vw; }
+  .explanation-box__title {
+    font-size: 25px; } }
 
 @media screen and (max-width: 768px) {
   html {
     font-size: 10px; }
   .header {
-    height: 10vw;
-    line-height: 10vw; }
+    height: 75px;
+    line-height: 75px; }
+  .header__menu {
+    display: block; }
   .nav {
     display: none; }
   .about {
@@ -446,16 +555,25 @@ section {
   .back-title {
     text-align: center; }
   .work {
-    height: 120vw; }
+    height: 160vw; }
   .work-box {
     flex-direction: column; }
   .screenshot-box {
     width: 100%;
-    height: 33.3%; }
+    height: 45%; }
   .explanation-box {
     width: 100%;
-    height: 66.6%; }
+    height: 55%; }
+  .explanation-box__title {
+    font-size: 20px; }
+  .explanation-box__button {
+    width: 70px;
+    height: 35px;
+    font-size: 12px; }
   .contact-box__icon {
     width: 30px; }
   .contact-box__contact {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .contact-box__copy {
+    width: 10px;
+    height: 10px; } }

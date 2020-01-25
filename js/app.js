@@ -1,6 +1,7 @@
 var slideToggle = true
 var slideTimer
 var slideFrequecy = 4000
+var menu_toggle = false
 
 window.onload = () => {
   // header hover 효과
@@ -18,6 +19,25 @@ window.onload = () => {
       choice.height = '0%'
     })
   }
+
+  // header menu 열기 이벤트
+  const menu_btn = document.querySelector('.header__menu')
+  const mobile_menu = document.querySelector('.nav-for-mobile')
+  const mobile_nav = document.querySelector('.mobile-nav')
+  const toggleMenu = (e) => {
+    if(menu_toggle){
+      mobile_menu.style.display = 'none'
+      menu_btn.src = '../assets/image/menu.png'
+      menu_toggle = false
+    } else {
+      mobile_menu.style.display = 'block'
+      menu_btn.src = '../assets/image/close.png'
+      menu_toggle = true
+    }
+  }
+
+  menu_btn.addEventListener('click', toggleMenu)
+  mobile_nav.addEventListener('click', toggleMenu)
 
   // about section 아이콘 움직임
   const details = document.querySelectorAll('.detail')
@@ -171,4 +191,24 @@ window.onload = () => {
       e.currentTarget.src = temp
     })
   }
+
+  // contact 클립보드 이벤트
+  const copyToClipboard = (e) => {
+    const clipboard = document.createElement('input')
+
+    clipboard.type = 'text'
+    clipboard.value = e.currentTarget.innerHTML
+
+    document.body.appendChild(clipboard)
+
+    clipboard.select()
+    document.execCommand('copy')
+    document.body.removeChild(clipboard)
+    alert('클립보드에 복사되었습니다.')
+  }
+  
+  const contacts = document.querySelectorAll('.contact-box__contact')
+
+  contacts[0].addEventListener('click', copyToClipboard)
+  contacts[1].addEventListener('click', copyToClipboard)
 }
