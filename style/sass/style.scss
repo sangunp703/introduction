@@ -1,5 +1,5 @@
 @import './variable.scss';
-@import "https://fonts.googleapis.com/css?family=Bowlby+One+SC|Nanum+Gothic+Coding|Sunflower:300&display=swap";
+@import 'https://fonts.googleapis.com/css?family=Bowlby+One+SC|Nanum+Gothic+Coding|Sunflower:300&display=swap';
 
 html {
   font-size: 1vw;
@@ -44,7 +44,6 @@ body::-webkit-scrollbar {
   transform: translateY(-50%);
   width: auto;
   height: 50%;
-  cursor: pointer;
 }
 
 .header__menu {
@@ -131,7 +130,7 @@ body::-webkit-scrollbar {
     width: 100vw;
     color: $logo-color;
 
-    &::before{
+    &::before {
       content: '';
       position: absolute;
       left: -25px;
@@ -143,7 +142,7 @@ body::-webkit-scrollbar {
       transition-duration: 1s;
     }
 
-    &::after{
+    &::after {
       content: '';
       position: absolute;
       right: -25px;
@@ -155,7 +154,7 @@ body::-webkit-scrollbar {
       transition-duration: 1s;
     }
 
-    &:hover::before{
+    &:hover::before {
       left: 20%;
     }
 
@@ -165,20 +164,53 @@ body::-webkit-scrollbar {
   }
 }
 
+.scroll-box {
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  width: 25px;
+  height: 50px;
+  border: 2px solid $logo-color;
+  border-radius: 13px;
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+.scroll-ball {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+  background-color: $logo-color;
+  transform: translateX(-50%);
+  border: 1px solid $logo-color;
+  border-radius: 1px;
+  animation: scroll_down 1.5s infinite;
+}
+
+@keyframes scroll_down {
+  0% {
+    top: 20%;
+  }
+  100% {
+    top: 70%;
+  }
+}
+
 // section style
 
 section {
   position: relative;
   width: 100vw;
-  margin: 1vw auto;
-  padding: 5vw 0;
+  margin: $header-height auto;
+  padding: $header-height 0;
 }
 
 // about style
 
 .about {
   width: 1300px;
-  margin-top: $header-height;
 }
 
 .about-content {
@@ -188,7 +220,7 @@ section {
 }
 
 .back-title {
-  font-size: 6.5vw;
+  font-size: 6vw;
   font-weight: 400;
   letter-spacing: 10px;
   text-transform: uppercase;
@@ -206,7 +238,7 @@ section {
 }
 
 .about-box__title {
-  font-size: 5vw;
+  font-size: 4vw;
   text-transform: uppercase;
   color: $logo-color;
   text-align: center;
@@ -277,41 +309,6 @@ section {
   width: 100%;
   text-align: center;
   font-size: 15px;
-}
-
-.scroll-box {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 25px;
-  height: 50px;
-  border: 2px solid $logo-color;
-  border-radius: 13px;
-  opacity: 1;
-  transition-duration: 0.5s;
-}
-
-.scroll-ball {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 2px;
-  height: 2px;
-  background-color: $logo-color;
-  transform: translateX(-50%);
-  border: 1px solid $logo-color;
-  border-radius: 1px;
-  animation: scroll_down 1.5s infinite;
-}
-
-@keyframes scroll_down {
-  0% {
-    top: 20%;
-  }
-  100% {
-    top: 70%;
-  }
 }
 
 // skill style
@@ -514,7 +511,7 @@ section {
   line-height: 45px;
   margin: 0 5%;
 }
-.explanation-box__hashtag{
+.explanation-box__hashtag {
   font-size: 15px;
   color: $logo-color;
   word-spacing: 15px;
@@ -601,7 +598,7 @@ section {
   cursor: pointer;
 }
 
-.contact-box__copy{
+.contact-box__copy {
   width: 30px;
   height: 30px;
   margin-left: 20px;

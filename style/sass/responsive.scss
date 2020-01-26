@@ -11,7 +11,7 @@
   .explanation-box__hashtag {
     font-size: 12px;
   }
-  .contact-box__copy{
+  .contact-box__copy {
     width: 20px;
     height: 20px;
   }
@@ -22,21 +22,24 @@
     height: $header-height * 1.5;
     line-height: $header-height * 1.5;
   }
-  
+
+  section {
+    padding: $header-height * 1.5 0;
+  }
+
   .about {
     width: 700px;
   }
   .detail {
-    position: relative;
     width: 120px;
     height: 120px;
     border-radius: 60px;
   }
-  .work{
+  .work {
     height: 60vw;
   }
 
-  .explanation-box__title{
+  .explanation-box__title {
     font-size: 25px;
   }
 }
@@ -59,8 +62,16 @@
     display: none;
   }
 
+  section {
+    padding: 75px 0;
+  }
+
   .about {
     width: 90vw;
+  }
+
+  .back-title {
+    font-size: 30px;
   }
 
   .about-content {
@@ -70,6 +81,10 @@
 
   .about-box {
     width: 100%;
+  }
+
+  .about-box__title {
+    font-size: 30px;
   }
 
   .detail-box {
@@ -114,7 +129,7 @@
     font-size: 20px;
   }
 
-  .contact-box__copy{
+  .contact-box__copy {
     width: 10px;
     height: 10px;
   }

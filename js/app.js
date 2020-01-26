@@ -1,6 +1,6 @@
 var slideToggle = true
 var slideTimer
-var slideFrequecy = 4000
+var slideFrequecy = 5000
 var menu_toggle = false
 
 window.onload = () => {
@@ -24,14 +24,14 @@ window.onload = () => {
   const menu_btn = document.querySelector('.header__menu')
   const mobile_menu = document.querySelector('.nav-for-mobile')
   const mobile_nav = document.querySelector('.mobile-nav')
-  const toggleMenu = (e) => {
-    if(menu_toggle){
+  const toggleMenu = e => {
+    if (menu_toggle) {
       mobile_menu.style.display = 'none'
-      menu_btn.src = '../assets/image/menu.png'
+      menu_btn.src = 'assets/image/menu.png'
       menu_toggle = false
     } else {
       mobile_menu.style.display = 'block'
-      menu_btn.src = '../assets/image/close.png'
+      menu_btn.src = 'assets/image/close.png'
       menu_toggle = true
     }
   }
@@ -164,11 +164,11 @@ window.onload = () => {
 
   const toggleSlide = () => {
     if (slideToggle) {
-      arrow_box_control.src = '../assets/image/play.png'
+      arrow_box_control.src = 'assets/image/play.png'
       clearInterval(slideTimer)
       slideToggle = false
     } else {
-      arrow_box_control.src = '../assets/image/pause.png'
+      arrow_box_control.src = 'assets/image/pause.png'
       slideTimer = setInterval(() => {
         moveNext()
       }, slideFrequecy)
@@ -193,7 +193,7 @@ window.onload = () => {
   }
 
   // contact 클립보드 이벤트
-  const copyToClipboard = (e) => {
+  const copyToClipboard = e => {
     const clipboard = document.createElement('input')
 
     clipboard.type = 'text'
@@ -206,7 +206,7 @@ window.onload = () => {
     document.body.removeChild(clipboard)
     alert('클립보드에 복사되었습니다.')
   }
-  
+
   const contacts = document.querySelectorAll('.contact-box__contact')
 
   contacts[0].addEventListener('click', copyToClipboard)

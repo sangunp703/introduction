@@ -20,10 +20,11 @@
   .header {
     height: 7.5vw;
     line-height: 7.5vw; }
+  section {
+    padding: 7.5vw 0; }
   .about {
     width: 700px; }
   .detail {
-    position: relative;
     width: 120px;
     height: 120px;
     border-radius: 60px; }
@@ -42,13 +43,19 @@
     display: block; }
   .nav {
     display: none; }
+  section {
+    padding: 75px 0; }
   .about {
     width: 90vw; }
+  .back-title {
+    font-size: 30px; }
   .about-content {
     margin: 0;
     flex-direction: column; }
   .about-box {
     width: 100%; }
+  .about-box__title {
+    font-size: 30px; }
   .detail-box {
     width: 100%;
     margin-bottom: 50px; }
