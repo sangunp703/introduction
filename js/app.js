@@ -197,7 +197,7 @@ window.onload = () => {
     const clipboard = document.createElement('input')
 
     clipboard.type = 'text'
-    clipboard.value = e.currentTarget.innerHTML
+    clipboard.value = e.currentTarget.innerText
 
     document.body.appendChild(clipboard)
 
